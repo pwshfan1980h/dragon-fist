@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#091720" />
+    <meta name="description" content="Dragon Fist — a neon harbor martial-arts arcade game. Three waves. One last showdown." />
+    <title>Dragon Fist · Harbor City</title>
+  </head>
+  <body>
+    <main id="app">
+      <header class="masthead"><a href="./" class="wordmark"><span class="mark">龍</span> DRAGON FIST <span class="edition">ARCADE / 01</span></a><span class="location"><i></i> HARBOR CITY · AFTER HOURS</span></header>
+      <section class="cabinet" aria-label="Dragon Fist arcade">
+        <div class="game-bar"><span><b>01</b> THE WAREHOUSE DISTRICT</span><div><button id="sound" aria-pressed="true">Sound on</button><button id="play">Start game</button></div></div>
+        <canvas id="game" tabindex="0" aria-label="Dragon Fist game"></canvas>
+        <div class="control-strip" aria-label="Keyboard controls"><span><kbd>←</kbd><kbd>→</kbd> MOVE</span><span><kbd>SPACE</kbd> JUMP</span><span><kbd>J</kbd> PUNCH</span><span><kbd>K</kbd> KICK</span><span><kbd>SHIFT</kbd> DODGE</span><span><kbd>↓</kbd> DUCK</span><span><kbd>P</kbd> PAUSE</span></div>
+      </section>
+      <footer><span>THREE WAVES. ONE LAST SHOWDOWN.</span><span>CHAIN HITS · DODGE STRIKES · OWN THE NIGHT</span></footer>
+      <section id="touch-controls" aria-label="Touch controls">
+        <div class="touch-cluster"><button data-key="ArrowLeft" aria-label="Move left">◀</button><button data-key="ArrowRight" aria-label="Move right">▶</button><button data-key="ArrowUp" aria-label="Jump">↑</button><button data-key="ArrowDown" aria-label="Duck">↓</button></div>
+        <div class="touch-cluster"><button data-key="KeyJ">PUNCH</button><button data-key="KeyK">KICK</button><button data-key="KeyL">DODGE</button></div>
+      </section>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

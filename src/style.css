@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@500;600;700&display=swap');
+:root { color-scheme: dark; font-family: Inter, system-ui, sans-serif; color: #c6d4d4; background: #09151e; font-synthesis: none; }
+* { box-sizing: border-box; }
+html, body { min-width: 320px; min-height: 100%; margin: 0; }
+body { background: radial-gradient(ellipse at 50% 20%, #21323b 0, #0b1922 57%, #07121b 100%); }
+body::before { content: ''; position: fixed; inset: 0; pointer-events: none; opacity: .14; background-image: repeating-linear-gradient(0deg, transparent 0 3px, #000 3px 4px); }
+#app { width: min(1280px, 100%, calc((100svh - 240px) * 16 / 9 + 80px)); min-height: 100svh; padding: 36px 40px 24px; margin: auto; display: flex; flex-direction: column; justify-content: center; }
+.masthead { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; }
+.wordmark { display: flex; align-items: center; gap: 12px; font: 26px 'Bebas Neue', Impact, sans-serif; letter-spacing: 1.6px; color: #f2debf; text-decoration: none; }
+.mark { width: 35px; height: 35px; display: grid; place-items: center; font: 23px serif; background: #bd654e; color: #f7e2c4; }
+.edition { color: #78919b; font: 9px Inter, sans-serif; letter-spacing: 1.5px; margin-left: 8px; padding-left: 20px; border-left: 1px solid #3e5059; }
+.location { font-size: 9px; letter-spacing: 1.6px; color: #89a1aa; }
+.location i { display: inline-block; width: 5px; height: 5px; background: #9bc9b9; border-radius: 50%; margin-right: 9px; box-shadow: 0 0 9px #9bc9b955; }
+.cabinet { border: 1px solid #43535a; background: #0a1721; box-shadow: 0 30px 80px #0006; }
+.game-bar { height: 46px; padding: 0 17px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #40505a; font-size: 9px; letter-spacing: 1.7px; }
+.game-bar b { color: #e5b285; padding-right: 12px; }
+.game-bar > div { display: flex; gap: 8px; }
+button { border: 1px solid #52616a; color: #c7d5d5; background: #152631; padding: 7px 12px; font: 600 10px Inter, sans-serif; cursor: pointer; touch-action: manipulation; }
+button:hover { background: #2a404a; color: #ffe2be; }
+button:focus-visible, canvas:focus-visible, a:focus-visible { outline: 2px solid #eabd8e; outline-offset: 3px; }
+#play { background: #dca97f; color: #172732; border-color: #dca97f; min-width: 88px; }
+canvas { width: 100%; height: auto; aspect-ratio: 16 / 9; display: block; background: #122631; cursor: pointer; }
+.control-strip { min-height: 57px; display: flex; align-items: center; justify-content: center; gap: 24px; border-top: 1px solid #3b4e58; padding: 12px; }
+.control-strip span { display: flex; align-items: center; gap: 6px; font-size: 8px; letter-spacing: .8px; color: #90a6af; white-space: nowrap; }
+kbd { font: 9px Inter, sans-serif; color: #d8dccc; padding: 5px 6px; min-width: 22px; text-align: center; background: #1a2b35; border: 1px solid #3a4d57; border-bottom-width: 2px; border-radius: 3px; }
+footer { display: flex; justify-content: space-between; margin-top: 20px; font-size: 8px; letter-spacing: 1.4px; color: #748d97; }
+#touch-controls { display: none; justify-content: space-between; gap: 12px; padding-top: 18px; }
+.touch-cluster { display: flex; gap: 6px; }
+.touch-cluster button { min-width: 40px; min-height: 49px; padding: 6px; font-size: 9px; touch-action: none; user-select: none; -webkit-user-select: none; }
+button:active { background: #a97154; color: white; }
+@media (max-width: 1000px) { #app { padding: 25px 20px; } .control-strip { gap: 12px; } .edition { display: none; } }
+@media (pointer: coarse), (max-width: 700px) { #touch-controls { display: flex; } #app { padding: 18px 12px; } .control-strip { flex-wrap: wrap; gap: 8px 15px; } .location { display: none; } .masthead { margin-bottom: 16px; } footer { line-height: 1.7; gap: 24px; } footer span:last-child { text-align: right; } }
+@media (max-width: 390px) { .game-bar { padding: 0 8px; letter-spacing: .5px; font-size: 8px; } .game-bar button { padding: 7px; } .touch-cluster { gap: 4px; } .touch-cluster button { min-width: 35px; font-size: 8px; } }
+@media (max-height: 580px) and (orientation: landscape) { #app { max-width: calc((100svh - 70px) * 16 / 9); padding: 0 8px; } .masthead, footer, .control-strip { display: none; } .game-bar { height: 32px; } #touch-controls { padding-top: 4px; } .touch-cluster button { min-height: 30px; } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; } }
+
+@media (max-width: 700px), (pointer: coarse) { #app { width: 100%; } }
