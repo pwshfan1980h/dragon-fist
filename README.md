@@ -1,5 +1,7 @@
 # Dragon Fist
 
+[Play Dragon Fist](https://pwshfan1980h.github.io/dragon-fist/)
+
 A canvas martial-arts arcade game set in Harbor City's warehouse district.
 Clear three waves, head east, and defeat the Iron Mantis.
 
@@ -34,3 +36,9 @@ seconds. You have three lives; high scores are saved in this browser.
 Visuals are drawn procedurally, with no image assets required. Display fonts load
 from Google Fonts with local fallbacks. Reduced-motion preferences disable rain
 animation, impact flashes, and camera shake. Leaving the window pauses combat.
+
+## GitHub Pages
+
+Pushing to `main` runs the tests, builds the game, and deploys `dist` to GitHub
+Pages through `.github/workflows/pages.yml`. Production assets use the
+`/dragon-fist/` base path; the local development server stays at `/`.
